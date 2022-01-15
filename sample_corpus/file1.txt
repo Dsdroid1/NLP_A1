@@ -1,0 +1,3 @@
+sample file to create a corpus containing some random words.
+three, there, their, that, than, bananas, ananas.
+sample, simple, simple simple 
