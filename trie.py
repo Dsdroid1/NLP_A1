@@ -1,7 +1,8 @@
-# Class to implement a trie
+# Program to demonstrate the efficient edit distance calculation using tries
 import re
+import time
 
-
+# Class to implement a trie
 class TrieNode:
     # Constructor
     def __init__(self):
@@ -78,13 +79,16 @@ def create_trie(path):
                 trie.insert(word)
     return trie
 
-
+# Driver code
 def main():
-    file_path = './sample_corpus/file1.txt'
+    file_path = './sample_corpus/words.txt'
     trie = create_trie(file_path)
     # print(trie)
     word = input('Enter a word: ')
+    before = time.time()
     print(correct_word_using_trie(word, trie))
+    after = time.time()
+    print('Time taken(s): ', after - before)
 
 
 if __name__ == '__main__':
